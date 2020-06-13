@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santi GC | Desings</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+     <h1 class="h1m">¡Oh no la página se encuentra en mantenimiento!</h1>
+     <img class="imgm"  src="assets/images/maintence.jpg" alt="">
+    
+        <div id="countdown">
+        <script>
+        var end = new Date('06/27/2020 9:30 AM');
+        
+            var _second = 1000;
+            var _minute = _second * 60;
+            var _hour = _minute * 60;
+            var _day = _hour * 24;
+            var timer;
+        
+            function showRemaining() {
+                var now = new Date();
+                var distance = end - now;
+                if (distance < 0) {
+        
+                    clearInterval(timer);
+                    document.getElementById('countdown').innerHTML = 'EXPIRED!';
+        
+                    return;
+                }
+                var days = Math.floor(distance / _day);
+                var hours = Math.floor((distance % _day) / _hour);
+                var minutes = Math.floor((distance % _hour) / _minute);
+                var seconds = Math.floor((distance % _minute) / _second);
+        
+                document.getElementById('countdown').innerHTML = days + ' dias, ';
+                document.getElementById('countdown').innerHTML += hours + ' horas, ';
+                document.getElementById('countdown').innerHTML += minutes + ' minutos y ';
+                document.getElementById('countdown').innerHTML += seconds + ' segundos';
+            }
+        
+            timer = setInterval(showRemaining, 1000);
+        </script>
+        
+      </div>
+      <ul class="list-inline mb-0">
+        <i id="solo" class="fab fa-facebook-f zoom"></i>
+        <i class="fab fa-instagram zoom"></i>
+        
+     </ul>
+  
+    
+</body>
+</html>
